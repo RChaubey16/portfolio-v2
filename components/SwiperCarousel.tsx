@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from './Image'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -32,16 +32,16 @@ export default function SwiperCarousel({ images }: SwiperCarouselProps) {
 
   // Calculate number of slides per view based on screen size
   const slidesPerView = isMobile ? 2 : 3
-  const slidesPerGroup = isMobile ? 2 : 3
+  // const slidesPerGroup = isMobile ? 2 : 3
 
   return (
     <div className="flex w-full flex-col">
-      <div className="mb-12 w-full">
+      <div className="mb-8 w-full">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, EffectCoverflow]}
           spaceBetween={16}
           slidesPerView={slidesPerView}
-          slidesPerGroup={slidesPerGroup}
+          // slidesPerGroup={slidesPerGroup}
           navigation={{
             prevEl: '.swiper-custom-prev',
             nextEl: '.swiper-custom-next',
@@ -50,6 +50,17 @@ export default function SwiperCarousel({ images }: SwiperCarouselProps) {
             clickable: true,
             el: '.swiper-custom-pagination',
           }}
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          loop={true}
           className="mySwiper"
         >
           {images.map((image, index) => (
@@ -63,7 +74,7 @@ export default function SwiperCarousel({ images }: SwiperCarouselProps) {
       </div>
       <div className="flex items-center justify-between gap-4">
         <button
-          className="swiper-custom-prev rounded-full bg-white/80 p-2 text-gray-800 shadow-md hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800"
+          className="swiper-custom-prev dark:hover:bg-primary-800/90 hover:bg-primary-800/90 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-md dark:bg-gray-800/80 dark:text-gray-200"
           aria-label="Previous"
         >
           <svg
@@ -79,7 +90,7 @@ export default function SwiperCarousel({ images }: SwiperCarouselProps) {
         </button>
         {/* <div className="swiper-custom-pagination"></div> */}
         <button
-          className="swiper-custom-next rounded-full bg-white/80 p-2 text-gray-800 shadow-md hover:bg-white dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-gray-800"
+          className="swiper-custom-next hover:bg-primary-800/90 dark:hover:bg-primary-800/90 cursor-pointer rounded-full bg-white/80 p-2 text-gray-800 shadow-md dark:bg-gray-800/80 dark:text-gray-200"
           aria-label="Next"
         >
           <svg
