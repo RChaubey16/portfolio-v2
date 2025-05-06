@@ -3,12 +3,35 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import SwiperCarousel from '@/components/SwiperCarousel'
 
 const MAX_DISPLAY = 5
+
+const carouselImages = [
+  { src: '/static/images/canada/maple.jpg', alt: 'Maple leaf' },
+  { src: '/static/images/canada/lake.jpg', alt: 'Lake view' },
+  { src: '/static/images/canada/mountains.jpg', alt: 'Mountains' },
+  { src: '/static/images/canada/toronto.jpg', alt: 'Toronto cityscape' },
+  { src: '/static/images/time-machine.jpg', alt: 'Time machine' },
+  { src: '/static/images/ocean.jpeg', alt: 'Ocean view' },
+  { src: '/static/images/github-traffic.png', alt: 'GitHub traffic' },
+  { src: '/static/images/google.png', alt: 'Google search' },
+]
 
 export default function Home({ posts }) {
   return (
     <>
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+            Featured
+          </h1>
+        </div>
+        <div className="py-12">
+          <SwiperCarousel images={carouselImages} />
+        </div>
+      </div>
+
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
