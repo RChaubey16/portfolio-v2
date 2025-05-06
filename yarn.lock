@@ -3597,11 +3597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@swc/helpers@npm:^0.5.0":
-=======
-"@swc/helpers@npm:^0.5.3":
->>>>>>> ae464b4 (feat: Add tweet-embed component.)
+"@swc/helpers@npm:^0.5.0, @swc/helpers@npm:^0.5.3":
   version: 0.5.17
   resolution: "@swc/helpers@npm:0.5.17"
   dependencies:
@@ -5469,7 +5465,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "depd@npm:2.0.0, depd@npm:^2.0.0":
   version: 2.0.0
   resolution: "depd@npm:2.0.0"
@@ -5477,10 +5472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:^2.0.0":
-=======
 "dequal@npm:^2.0.0, dequal@npm:^2.0.3":
->>>>>>> ae464b4 (feat: Add tweet-embed component.)
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: 8679b850e1a3d0ebbc46ee780d5df7b478c23f335887464023a631d1b9af051ad4a6595a44220f9ff8ff95a8ddccf019b5ad778a976fd7bbf77383d36f412f90
@@ -12200,12 +12192,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
 "swiper@npm:^11.2.6":
   version: 11.2.6
   resolution: "swiper@npm:11.2.6"
   checksum: 8663d54531fcbb25eb82174654994d9a1d8c64fe53be80e8ccd322d0c700643ac6eca0b9ffd9673c424801b1bdfe226d83d4b8cdb1488ff6affd9fd02561fd0a
-=======
+  languageName: node
+  linkType: hard
+
 "swr@npm:^2.2.4":
   version: 2.3.3
   resolution: "swr@npm:2.3.3"
@@ -12215,7 +12208,6 @@ __metadata:
   peerDependencies:
     react: ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
   checksum: 25b2ab03d0149951e4612fae8458d333d6fbe912298684495969250553176b5b5b731be119f406ebadf6e9c5dc39726dd2492cca9684f448aa1734274e2a4919
->>>>>>> ae464b4 (feat: Add tweet-embed component.)
   languageName: node
   linkType: hard
 
