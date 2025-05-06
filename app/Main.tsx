@@ -3,12 +3,50 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import SwiperCarousel from '@/components/SwiperCarousel'
 
 const MAX_DISPLAY = 5
+
+const carouselImages = [
+  { src: '/static/images/carousel/me-playing-pool.jpg', alt: 'Me playing pool in office' },
+  { src: '/static/images/carousel/golden-hour.jpg', alt: 'Sunrise from a flight' },
+  {
+    src: '/static/images/carousel/me-at-marina-pier-2.jpg',
+    alt: 'Me at Marina bay sands pier, Singapore',
+  },
+  {
+    src: '/static/images/carousel/streets-of-landour.JPG',
+    alt: 'Quite, serene streets of Landour',
+  },
+  {
+    src: '/static/images/carousel/me-at-landour-bakehouse.jpg',
+    alt: 'Me outside Landour bakehouse',
+  },
+  { src: '/static/images/carousel/quote-tree.jpg', alt: 'Quote on a tree' },
+  {
+    src: '/static/images/carousel/team-qed42.jpg',
+    alt: 'QED42 team at DrupalCon Singapore 2024',
+  },
+  {
+    src: '/static/images/carousel/top-of-marina-bay-sands.jpg',
+    alt: 'Top view from Marina Bay Sands',
+  },
+]
 
 export default function Home({ posts }) {
   return (
     <>
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
+            Featured
+          </h1>
+        </div>
+        <div className="py-12">
+          <SwiperCarousel images={carouselImages} />
+        </div>
+      </div>
+
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
