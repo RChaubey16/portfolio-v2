@@ -6,9 +6,9 @@ const IntroAvatar = () => {
       <div className="bg-primary-700 dark:bg-primary-500 absolute top-10 left-20 h-20 w-20 animate-pulse rounded-[300px] blur-3xl lg:left-24" />
 
       <Image
-        src={'/static/images/ghibli-avatar.png'}
+        src={'/static/images/my-ghibli.png'}
         alt={'My ghibli version avatar'}
-        className="z-10 object-contain lg:w-38 xl:w-42"
+        className="z-10 object-contain lg:w-42 xl:w-52"
         width={100}
         height={100}
         quality={100}
