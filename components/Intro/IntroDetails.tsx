@@ -13,15 +13,12 @@ const IntroDetails = () => {
       </p>
       <p className="mb-4 text-lg leading-7 text-gray-700 dark:text-gray-300">
         Fair warning: I might talk about{' '}
-        <span className="text-primary-500 underline">
-          my love for JavaScript and Messi's legacy
-        </span>{' '}
-        in the same sentence.
+        <span className="text-primary-500">my love for JavaScript and Messi's legacy</span> in the
+        same sentence.
       </p>
       <p className="mb-4 text-lg leading-7 text-gray-800 dark:text-gray-300">
-        My philosophy is simple: if{' '}
-        <span className="text-primary-500 underline">you're not having fun</span> while working,{' '}
-        <span className="text-primary-500 underline">you're doing it wrong.</span>
+        My philosophy is simple: if <span className="text-primary-500">you're not having fun</span>{' '}
+        while working, <span className="text-primary-500">you're doing it wrong.</span>
       </p>
       <p className="mb-4 text-lg leading-7 text-gray-800 dark:text-gray-300">
         Life's too short for bad code or boring moments—so let’s keep it exciting, both at work and
